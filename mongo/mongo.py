@@ -33,6 +33,7 @@ def get_data(table, lower_bound):
         "lower_bound": lower_bound,
         })
     )
+    assert(r.status_code == 200)
     return r.json()
 
 def get_rows(table):
@@ -48,7 +49,7 @@ def get_rows(table):
 
 def highest_id(rows):
     if not rows:
-        return 0
+        return -1
     return max(rows, key=lambda x: x['id'])['id']
 
 def reset_db():
