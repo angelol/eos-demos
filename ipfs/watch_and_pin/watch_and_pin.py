@@ -32,6 +32,7 @@ def get_data(table, lower_bound):
         "lower_bound": lower_bound,
         })
     )
+    assert(r.status_code == 200)
     return r.json()
 
 def get_rows(table):
