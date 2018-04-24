@@ -16,6 +16,7 @@ tables = ['table1', 'table2']
 DROP_DB_ON_EVERY_RUN = False # Turn this on if you want to import multiple times
 ### End of configuration
 ```
+This script assumes that all tables have a primary key named "id".
 
 ## Limitations
 It currently does not support live tracking of the changes from the chain. If you want to update the state of mongodb, you need to re-run this script again and refetch all data. Don't forget to enable DROP_DB_ON_EVERY_RUN.
